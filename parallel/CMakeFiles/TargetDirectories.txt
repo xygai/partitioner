@@ -1,0 +1,3 @@
+/home/users/mschpc/2019/xgai/partitioner/parallel/CMakeFiles/rebuild_cache.dir
+/home/users/mschpc/2019/xgai/partitioner/parallel/CMakeFiles/parallel.dir
+/home/users/mschpc/2019/xgai/partitioner/parallel/CMakeFiles/edit_cache.dir

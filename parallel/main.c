@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/time.h>
 
+#include "mpi.h"
 #include "graph.h"
 #include "multilevel.h"
 
@@ -15,9 +15,17 @@ int main(int argc, char* argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    /* time the program */
-    struct timeval start, end;
-    gettimeofday(&start, NULL);
+
+    MPI_Comm comm;
+    int nprocs, rank;
+    double start, end;
+
+    MPI_Init(&argc, &argv);
+    MPI_Comm_dup(MPI_COMM_WORLD, &comm);
+    MPI_Comm_size(comm, &nprocs);
+    MPI_Comm_rank(comm, &rank);
+
+    //printf("this is process %d\n", rank);
 
     nparts = atoi(argv[3]);
 
@@ -29,23 +37,31 @@ int main(int argc, char* argv[]) {
 
     int nvtxs = graph->nvtxs;
     int *part = malloc(sizeof(int) * nvtxs);
+    IntSet(nvtxs, 0, part);
+
+    /* start timer */
+    start = MPI_Wtime();
 
     /* partition */
     //BisectGGP(graph);
-    int edgecut = MlevelRecursiveBisect(graph, nparts, part,0);
+    //int edgecut = MlevelRecursiveBisect(graph, nparts, part,0);
+    InitPartParallel(graph, nparts, part, comm);
 
     //TestSplit(graph);
+    end = MPI_Wtime();
 
-    /* end time */
-    gettimeofday(&end, NULL);
-    double time_spent = (end.tv_sec - start.tv_sec) + (end.tv_usec - start.tv_usec)/ 1000000.0;
-    printf("total execution time: %f\n", time_spent);
+    if(rank == 0){  // change to the group with smallest edgecut
+        printf("run time = %f\n", end - start);
+        //IntCopy(graph->nvtxs, part, graph->where);
+        //printf("total edge cut = %d\n", ComputeEdgeCut(graph));
+        WritePartition(argv[2], nvtxs, part);
+    }
 
-    WritePartition(argv[2], nvtxs, part);
-    printf("total edge cut = %d\n", edgecut);
 
     free(part);
     //FreeGraph(&graph);
+
+    MPI_Finalize();
 
     return 0;
 }
