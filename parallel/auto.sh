@@ -13,5 +13,5 @@ module load cports
 module load gcc/9.2.0-gnu openmpi/3.1.3-gnu
 
 # run it
-mpirun ./parallel auto.graph auto.part 16
+mpirun ./build/parallel auto.graph auto.part 16
 
