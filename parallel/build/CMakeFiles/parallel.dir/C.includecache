@@ -6,51 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/users/mschpc/2019/xgai/partitioner/parallel/coarsen.c
-coarsen.h
-/home/users/mschpc/2019/xgai/partitioner/parallel/coarsen.h
-
 /home/users/mschpc/2019/xgai/partitioner/parallel/coarsen.h
 graph.h
 /home/users/mschpc/2019/xgai/partitioner/parallel/graph.h
 
-/home/users/mschpc/2019/xgai/partitioner/parallel/graph.c
-stdlib.h
--
-stdio.h
--
-graph.h
 /home/users/mschpc/2019/xgai/partitioner/parallel/graph.h
-utils.h
-/home/users/mschpc/2019/xgai/partitioner/parallel/utils.h
-
-/home/users/mschpc/2019/xgai/partitioner/parallel/graph.h
-
-/home/users/mschpc/2019/xgai/partitioner/parallel/initpart.c
-initpart.h
-/home/users/mschpc/2019/xgai/partitioner/parallel/initpart.h
-utils.h
-/home/users/mschpc/2019/xgai/partitioner/parallel/utils.h
-stdlib.h
--
-stdio.h
--
 
 /home/users/mschpc/2019/xgai/partitioner/parallel/initpart.h
 graph.h
 /home/users/mschpc/2019/xgai/partitioner/parallel/graph.h
-
-/home/users/mschpc/2019/xgai/partitioner/parallel/main.c
-stdio.h
--
-stdlib.h
--
-mpi.h
-/home/users/mschpc/2019/xgai/partitioner/parallel/mpi.h
-graph.h
-/home/users/mschpc/2019/xgai/partitioner/parallel/graph.h
-multilevel.h
-/home/users/mschpc/2019/xgai/partitioner/parallel/multilevel.h
 
 /home/users/mschpc/2019/xgai/partitioner/parallel/multilevel.c
 multilevel.h
@@ -74,23 +38,11 @@ utils.h
 mpi.h
 /home/users/mschpc/2019/xgai/partitioner/parallel/mpi.h
 
-/home/users/mschpc/2019/xgai/partitioner/parallel/refine.c
-refine.h
-/home/users/mschpc/2019/xgai/partitioner/parallel/refine.h
-
 /home/users/mschpc/2019/xgai/partitioner/parallel/refine.h
 graph.h
 /home/users/mschpc/2019/xgai/partitioner/parallel/graph.h
 utils.h
 /home/users/mschpc/2019/xgai/partitioner/parallel/utils.h
-
-/home/users/mschpc/2019/xgai/partitioner/parallel/utils.c
-utils.h
-/home/users/mschpc/2019/xgai/partitioner/parallel/utils.h
-stdlib.h
--
-time.h
--
 
 /home/users/mschpc/2019/xgai/partitioner/parallel/utils.h
 

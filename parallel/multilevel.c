@@ -22,9 +22,10 @@ int MlevelBisect(graph_t *graph)
 
     //TODO: step 3 Refine;
 
-    int EdgeCut = ComputeEdgeCut(graph);
+    //int EdgeCut = ComputeEdgeCut(graph);
 
-    return EdgeCut;
+    //return EdgeCut;
+    return 0;
 }
 
 // do multilevel recursive bisection
@@ -33,17 +34,13 @@ int MlevelRecursiveBisect(graph_t *graph, int nparts, int *part, int fpart){
 
     graph_t *lgraph = NULL, *rgraph = NULL;
     int *label, *where;
-    int i, nvtxs, total_edge_cut;
+    int i, nvtxs;
 
     nvtxs   = graph->nvtxs;
 
-#ifdef debug
-    if(nparts>2)
-        printf("partition a graph at level %d\n", level++);
-#endif
 
     /* perform the bisection */
-    total_edge_cut = MlevelBisect(graph);
+    MlevelBisect(graph);
 
     where   = graph->where;
     label   = graph->label;
@@ -54,29 +51,17 @@ int MlevelRecursiveBisect(graph_t *graph, int nparts, int *part, int fpart){
     if(nparts > 2)
         SplitGraph(graph, &lgraph, &rgraph);
 
-#ifdef debug
-    if(lgraph != NULL){
-        printf("lnvtxs %d rnvtxs %d\n", lgraph->nvtxs, rgraph->nvtxs);
-
-        printf("lgraph:\n");
-        PrintGraph(lgraph);
-
-        printf("lgraph:\n");
-        PrintGraph(rgraph);
-    }
-#endif
-
     /* Free the memory of the top level graph */
     if(nparts > 2)  // added for parallelization
         FreeGraph(&graph);
 
     /* Do the recursive call */
     if (nparts > 2) {
-        total_edge_cut += MlevelRecursiveBisect(lgraph, nparts/2, part, fpart);
-        total_edge_cut += MlevelRecursiveBisect(rgraph, nparts/2, part, fpart + nparts/2);
+        MlevelRecursiveBisect(lgraph, nparts/2, part, fpart);
+        MlevelRecursiveBisect(rgraph, nparts/2, part, fpart + nparts/2);
     }
 
-    return total_edge_cut;
+    return 0;
 }
 
 // SplitGraph into two parts: lgraph(0), rgraph(1)
@@ -173,7 +158,7 @@ void SplitGraph(graph_t *graph, graph_t **r_lgraph, graph_t **r_rgraph)
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
 
 /* partition the graph with adjacency information, this is the entrance of the partitioning scheme */
-void PartGraphRecursive(int nvtxs, int *xadj, int *adjncy, int *vwgt, int *adjwgt, int nparts, int *edgecut, int *part)
+void PartGraphRecursive(int nvtxs, int *xadj, int *adjncy, int *vwgt, int *adjwgt, int nparts, int *part)
 {
 
     graph_t *graph;
@@ -182,7 +167,7 @@ void PartGraphRecursive(int nvtxs, int *xadj, int *adjncy, int *vwgt, int *adjwg
     graph = SetupGraph(nvtxs, xadj, adjncy, vwgt, adjwgt);
 
     /* start the partitioning */
-    *edgecut = MlevelRecursiveBisect(graph, nparts, part, 0);
+    MlevelRecursiveBisect(graph, nparts, part, 0);
 
 }
 
@@ -203,7 +188,7 @@ void InitPartParallel(graph_t * graph, int nparts, int *where1,  MPI_Comm comm)
 
     // make a copy of the graph
     int *xadj, *adjncy, *vwgt, *adjwgt;
-    int edgecut = 0;
+    int localedgecut, globaledgecut;
     int gnvtxs = graph->nvtxs;
     int gnedges = graph->nedges;
 
@@ -213,14 +198,18 @@ void InitPartParallel(graph_t * graph, int nparts, int *where1,  MPI_Comm comm)
     adjwgt = malloc(sizeof(int) * gnedges);
 
     int i ;
-    for(i = 0; i < graph->nvtxs + 1; i++){
-        xadj[i] = graph->xadj[i];
-        vwgt[i] = graph->vwgt[i];
-    }
-    for(i = 0; i < graph->nedges; i++){
-        adjncy[i] = graph->adjncy[i];
-        adjwgt[i] = graph->adjwgt[i];
-    }
+    IntCopy(gnvtxs + 1, graph->xadj, xadj);
+    IntCopy(gnvtxs + 1, graph->vwgt, vwgt);
+    IntCopy(gnedges, graph->adjncy, adjncy);
+    IntCopy(gnedges, graph->adjwgt, adjwgt);
+//    for(i = 0; i < graph->nvtxs + 1; i++){
+//        xadj[i] = graph->xadj[i];
+//        vwgt[i] = graph->vwgt[i];
+//    }
+//    for(i = 0; i < graph->nedges; i++){
+//        adjncy[i] = graph->adjncy[i];
+//        adjwgt[i] = graph->adjwgt[i];
+//    }
 
     // create processor groups
     MPI_Comm_split(comm, rank%ngroups, 0, &newcomm);
@@ -240,7 +229,7 @@ void InitPartParallel(graph_t * graph, int nparts, int *where1,  MPI_Comm comm)
 
         //IntSet(gnvtxs, 0, part);
         //MlevelRecursiveBisect(graph, 2, part, 0);   //take parameters as inputs instead of graphs
-        PartGraphRecursive(graph->nvtxs, graph->xadj, graph->adjncy, graph->vwgt, graph->adjwgt, 2, &edgecut, part);
+        PartGraphRecursive(graph->nvtxs, graph->xadj, graph->adjncy, graph->vwgt, graph->adjwgt, 2, part);
 
         //int count0 = CountPart(0, graph->nvtxs, part);
         //int count1 = CountPart(1, graph->nvtxs, part);
@@ -280,7 +269,7 @@ void InitPartParallel(graph_t * graph, int nparts, int *where1,  MPI_Comm comm)
         //printf("[ID: %d] [newID: %d] bisect again!\n", rank, newrank);
         //IntSet(gnvtxs, -1, part);
         //MlevelRecursiveBisect(graph, lnparts, part, 0);
-        PartGraphRecursive(graph->nvtxs, graph->xadj, graph->adjncy, graph->vwgt, graph->adjwgt, lnparts, &edgecut, part);
+        PartGraphRecursive(graph->nvtxs, graph->xadj, graph->adjncy, graph->vwgt, graph->adjwgt, lnparts, part);
         for(i=0; i< graph->nvtxs; i++)
             where0[graph->label[i]] = fpart + part[i];    // graph already modified
 
@@ -294,13 +283,8 @@ void InitPartParallel(graph_t * graph, int nparts, int *where1,  MPI_Comm comm)
 
     MPI_Allreduce(where0, where1, gnvtxs, MPI_INT, MPI_SUM, newcomm);
 
-    int totalcut = 0;
-    MPI_Allreduce(&edgecut, &totalcut, 1, MPI_INT, MPI_SUM, newcomm);
-    if(rank == 0){
-        printf("total cut = %d\n", totalcut);
-    }
 
-    FreeGraph(&graph);
+    //FreeGraph(&graph);
     free(where0);
     free(part);
     MPI_Comm_free(&newcomm);

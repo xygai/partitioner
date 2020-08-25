@@ -13,5 +13,5 @@ module load cports
 module load gcc/9.2.0-gnu openmpi/3.1.3-gnu
 
 # run it
-mpirun ./parallel piece.dual piece.part 16
+mpirun ./build/parallel piece.dual piece.part 16
 
