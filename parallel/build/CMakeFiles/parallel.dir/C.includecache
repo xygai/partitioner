@@ -23,6 +23,8 @@ stdio.h
 -
 stdlib.h
 -
+time.h
+-
 
 /home/users/mschpc/2019/xgai/partitioner/parallel/multilevel.h
 graph.h
