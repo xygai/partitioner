@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -n 16        # 8 cores = 1 node on lonsdale
+#SBATCH -n 8        # 8 cores = 1 node on lonsdale
 #SBATCH -p compute
 #SBATCH -t 6:00:00  # 6 hours
 #SBATCH -J xgai

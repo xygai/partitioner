@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 #include "mpi.h"
 #include "graph.h"
@@ -25,6 +26,7 @@ int main(int argc, char* argv[]) {
     MPI_Comm_size(comm, &nprocs);
     MPI_Comm_rank(comm, &rank);
 
+    srand(time(NULL)+rank);
     //printf("this is process %d\n", rank);
 
     nparts = atoi(argv[3]);
@@ -33,7 +35,7 @@ int main(int argc, char* argv[]) {
 
     /* print the original graph */
     //PrintGraph(graph);
-    printf("total vertex weight = %d, total edge weight = %d\n", TotalVertexWeight(graph), TotalEdgeWeight(graph));
+    //printf("total vertex weight = %d, total edge weight = %d\n", TotalVertexWeight(graph), TotalEdgeWeight(graph));
 
     int nvtxs = graph->nvtxs;
     int *part = malloc(sizeof(int) * nvtxs);

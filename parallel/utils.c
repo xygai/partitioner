@@ -1,12 +1,9 @@
-
 #include "utils.h"
 #include <stdlib.h>
-#include <time.h>
 
 // random in within range [0, upper - 1]
 int RandomInt(int upper)
 {
-    srand(time(NULL));
     int num = rand() % upper;
     return num;
 }

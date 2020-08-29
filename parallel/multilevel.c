@@ -183,12 +183,11 @@ void InitPartParallel(graph_t * graph, int nparts, int *where1,  MPI_Comm comm)
     MPI_Comm_size(comm, &nprocs);
     MPI_Comm_rank(comm, &rank);
 
-    ngroups = MIN(nprocs, 1);
+    ngroups = MIN(nprocs, 2);
 
 
     // make a copy of the graph
     int *xadj, *adjncy, *vwgt, *adjwgt;
-    int localedgecut, globaledgecut;
     int gnvtxs = graph->nvtxs;
     int gnedges = graph->nedges;
 
@@ -283,12 +282,37 @@ void InitPartParallel(graph_t * graph, int nparts, int *where1,  MPI_Comm comm)
 
     MPI_Allreduce(where0, where1, gnvtxs, MPI_INT, MPI_SUM, newcomm);
 
+    /* shouldn't change graph here? */
+//    graph->xadj   = xadj;
+//    graph->adjncy = adjncy;
+//    graph->adjwgt = adjwgt;
+//    graph->vwgt   = vwgt;
+//    graph->where  = where1;
+//    graph->nvtxs  = gnvtxs;
+//
+//    struct {
+//        int cut;
+//        int rank;
+//    } ledgecut, gedgecut;
+//
+//    ledgecut.cut = ComputeEdgeCut(graph);
+//    ledgecut.rank = rank;
+//
+//    MPI_Allreduce(&ledgecut, &gedgecut, 1, MPI_2INT, MPI_MINLOC, comm);
+//    MPI_Bcast(where1, gnvtxs, MPI_INT, gedgecut.rank, comm);
+    //printf("edgecut = %d\n", gedgecut.cut);
 
+
+    free(xadj);
+    free(adjncy);
+    free(adjwgt);
+    free(vwgt);
+
+    MPI_Barrier(comm);
     //FreeGraph(&graph);
     free(where0);
     free(part);
     MPI_Comm_free(&newcomm);
-    MPI_Barrier(comm);
 
 }
 
