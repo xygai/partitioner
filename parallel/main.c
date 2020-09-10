@@ -49,7 +49,6 @@ int main(int argc, char* argv[]) {
     end = MPI_Wtime();
 
     if(rank == 0){
-        printf("run time = %f\n", end - start);
         WritePartition(argv[2], nvtxs, part);
     }
 
@@ -57,6 +56,11 @@ int main(int argc, char* argv[]) {
     graph = ReadGraph(argv[1]);
 
     Refine(graph, part, nparts, comm);
+
+    if(rank == 0){
+        printf("run time = %f\n", end - start);
+        WritePartition("refine.piece.part", nvtxs, part);
+    }
 
     free(part);
     FreeGraph(&graph);

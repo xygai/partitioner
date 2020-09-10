@@ -13,5 +13,7 @@ void FreeRefineMemory(graph_t *graph);
 int decomp1d(int n, int p, int rank, int *s, int *e);
 
 void ComputeRefineParams(graph_t *graph);
+void ComputeRefineParamsPar(graph_t *graph, int rank, int vs, int ve);
+
 void Refine(graph_t *graph, int * where, int nparts,  MPI_Comm comm);
 #endif //SERIAL_REFINE_H
