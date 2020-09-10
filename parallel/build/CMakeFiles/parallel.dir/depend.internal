@@ -32,6 +32,7 @@ CMakeFiles/parallel.dir/multilevel.c.o
  /home/users/mschpc/2019/xgai/partitioner/parallel/utils.h
 CMakeFiles/parallel.dir/refine.c.o
  /home/users/mschpc/2019/xgai/partitioner/parallel/graph.h
+ /home/users/mschpc/2019/xgai/partitioner/parallel/initpart.h
  /home/users/mschpc/2019/xgai/partitioner/parallel/refine.c
  /home/users/mschpc/2019/xgai/partitioner/parallel/refine.h
  /home/users/mschpc/2019/xgai/partitioner/parallel/utils.h

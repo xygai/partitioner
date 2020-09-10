@@ -31,6 +31,7 @@ CMakeFiles/parallel.dir/multilevel.c.o: ../refine.h
 CMakeFiles/parallel.dir/multilevel.c.o: ../utils.h
 
 CMakeFiles/parallel.dir/refine.c.o: ../graph.h
+CMakeFiles/parallel.dir/refine.c.o: ../initpart.h
 CMakeFiles/parallel.dir/refine.c.o: ../refine.c
 CMakeFiles/parallel.dir/refine.c.o: ../refine.h
 CMakeFiles/parallel.dir/refine.c.o: ../utils.h

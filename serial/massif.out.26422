@@ -1,0 +1,963 @@
+desc: (none)
+cmd: ./serial auto.graph auto.part 4
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=106550
+mem_heap_B=80
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=107509
+mem_heap_B=648
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=108800
+mem_heap_B=768
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=111908
+mem_heap_B=1795552
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=111946
+mem_heap_B=28312440
+mem_heap_extra_B=608
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=111984
+mem_heap_B=30107220
+mem_heap_extra_B=620
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=6063096
+mem_heap_B=30107340
+mem_heap_extra_B=612
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=108965327
+mem_heap_B=30107580
+mem_heap_extra_B=612
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1817793793
+mem_heap_B=31902360
+mem_heap_extra_B=624
+mem_stacks_B=0
+heap_tree=detailed
+n5: 31902360 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 26516888 0x400F57: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 26516888 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794784 0x400F37: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794784 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x400F76: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794780 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x40114E: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794780 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n0: 1128 in 4 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=10
+#-----------
+time=1817793831
+mem_heap_B=58419248
+mem_heap_extra_B=1184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1888574265
+mem_heap_B=58419248
+mem_heap_extra_B=1184
+mem_stacks_B=0
+heap_tree=detailed
+n6: 58419248 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 26516888 0x400F57: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 26516888 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 26516888 0x40116E: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 26516888 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794784 0x400F37: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794784 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x400F76: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794780 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x40114E: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794780 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n0: 1128 in 4 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=12
+#-----------
+time=1888574265
+mem_heap_B=58418680
+mem_heap_extra_B=1168
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=1888575162
+mem_heap_B=58418200
+mem_heap_extra_B=1160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=1980591916
+mem_heap_B=60212980
+mem_heap_extra_B=1172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=1980591994
+mem_heap_B=62007760
+mem_heap_extra_B=1184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=1980592032
+mem_heap_B=63802540
+mem_heap_extra_B=1196
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=1980592070
+mem_heap_B=65597320
+mem_heap_extra_B=1208
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=1998539999
+mem_heap_B=67392100
+mem_heap_extra_B=1220
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=1998540034
+mem_heap_B=69186880
+mem_heap_extra_B=1232
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=2083416346
+mem_heap_B=69186880
+mem_heap_extra_B=1232
+mem_stacks_B=0
+heap_tree=detailed
+n12: 69186880 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 26516888 0x400F57: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 26516888 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 26516888 0x40116E: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 26516888 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794784 0x400F37: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794784 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x4015D2: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 1794780 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n1: 1794780 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x4015F1: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 1794780 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n1: 1794780 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x401610: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 1794780 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n1: 1794780 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x4016D5: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 1794780 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x4016EA: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 1794780 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x400F76: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794780 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x40114E: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794780 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n0: 1794780 0x400B6F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n0: 80 in 4 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=21
+#-----------
+time=2083416346
+mem_heap_B=67392100
+mem_heap_extra_B=1220
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=2083416377
+mem_heap_B=65597320
+mem_heap_extra_B=1208
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=2531480032
+mem_heap_B=67392100
+mem_heap_extra_B=1220
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=2550773977
+mem_heap_B=67392180
+mem_heap_extra_B=1228
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=2550774053
+mem_heap_B=68289572
+mem_heap_extra_B=1236
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=2550774090
+mem_heap_B=69186960
+mem_heap_extra_B=1248
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=2550774127
+mem_heap_B=82397056
+mem_heap_extra_B=4792
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=2550774164
+mem_heap_B=95607152
+mem_heap_extra_B=8336
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=2550774201
+mem_heap_B=96504540
+mem_heap_extra_B=8348
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=2550774271
+mem_heap_B=96504620
+mem_heap_extra_B=8356
+mem_stacks_B=0
+heap_tree=detailed
+n13: 96504620 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 26516888 0x400F57: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 26516888 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 26516888 0x40116E: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 26516888 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 13210096 0x4014A9: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13210096 0x401D91: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13210096 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13210096 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 13210096 0x4014C5: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13210096 0x401D91: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13210096 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13210096 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n0: 2692408 in 9 places, all below massif's threshold (01.00%)
+ n1: 1794784 0x400F37: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794784 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x4015D2: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 1794780 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n1: 1794780 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x4015F1: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 1794780 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n1: 1794780 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x401610: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 1794780 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n1: 1794780 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x401CA7: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n0: 1794780 0x400B6F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x40114E: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794780 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x400F76: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794780 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+#-----------
+snapshot=31
+#-----------
+time=2550774347
+mem_heap_B=97402016
+mem_heap_extra_B=8376
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=2550774384
+mem_heap_B=98299408
+mem_heap_extra_B=8384
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=2550774421
+mem_heap_B=111606200
+mem_heap_extra_B=9440
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=2550774458
+mem_heap_B=124912992
+mem_heap_extra_B=10496
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=2550774495
+mem_heap_B=125810384
+mem_heap_extra_B=10504
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=2926983409
+mem_heap_B=125810384
+mem_heap_extra_B=10504
+mem_stacks_B=0
+heap_tree=peak
+n16: 125810384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 26516888 0x400F57: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 26516888 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 26516888 0x40116E: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 26516888 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n2: 26516888 0x4014A9: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13306792 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13306792 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13306792 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13210096 0x401D91: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13210096 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13210096 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n2: 26516888 0x4014C5: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13306792 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13306792 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13306792 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13210096 0x401D91: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13210096 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13210096 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794788 0x401471: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794788 in 2 places, all below massif's threshold (01.00%)
+ n1: 1794784 0x400F37: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794784 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x401CA7: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x40148D: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794780 in 2 places, all below massif's threshold (01.00%)
+ n1: 1794780 0x4014E1: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794780 in 2 places, all below massif's threshold (01.00%)
+ n1: 1794780 0x400F76: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794780 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x40114E: ReadGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 1794780 0x400B1F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n0: 1794780 0x400B6F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x4015D2: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 1794780 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n1: 1794780 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x4015F1: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 1794780 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n1: 1794780 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 1794780 0x401610: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 1794780 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 1794780 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n1: 1794780 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 1794780 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n0: 240 in 6 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=37
+#-----------
+time=2926983409
+mem_heap_B=124015604
+mem_heap_extra_B=10492
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=2926983455
+mem_heap_B=122220820
+mem_heap_extra_B=10484
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=2926983487
+mem_heap_B=120426040
+mem_heap_extra_B=10472
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=2926983519
+mem_heap_B=93909152
+mem_heap_extra_B=9912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=2926983551
+mem_heap_B=67392264
+mem_heap_extra_B=9352
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=2926983583
+mem_heap_B=65597484
+mem_heap_extra_B=9340
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=2926983615
+mem_heap_B=63802704
+mem_heap_extra_B=9328
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=2926983647
+mem_heap_B=62007924
+mem_heap_extra_B=9316
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=2926983679
+mem_heap_B=60213144
+mem_heap_extra_B=9304
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=2926983710
+mem_heap_B=60213064
+mem_heap_extra_B=9296
+mem_stacks_B=0
+heap_tree=detailed
+n7: 60213064 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 26516888 0x4014A9: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13306792 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13306792 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13306792 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13210096 0x401D91: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13210096 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13210096 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n2: 26516888 0x4014C5: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13306792 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13306792 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13306792 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13210096 0x401D91: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13210096 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13210096 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n2: 1794788 0x401471: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897396 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897396 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897396 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897392 0x401D91: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897392 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897392 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n2: 1794780 0x40148D: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897392 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897392 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897392 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897388 0x401D91: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897388 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897388 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n2: 1794780 0x4014E1: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897392 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897392 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897392 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897388 0x401D91: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897388 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897388 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n0: 1794780 0x400B6F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n0: 160 in 15 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=47
+#-----------
+time=2926983795
+mem_heap_B=61110452
+mem_heap_extra_B=9308
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=2926983833
+mem_heap_B=62007840
+mem_heap_extra_B=9320
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=2926983871
+mem_heap_B=62905228
+mem_heap_extra_B=9332
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=2935957880
+mem_heap_B=63802616
+mem_heap_extra_B=9344
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=2935957915
+mem_heap_B=64700004
+mem_heap_extra_B=9356
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=2977490467
+mem_heap_B=63802616
+mem_heap_extra_B=9344
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=2977490498
+mem_heap_B=62905228
+mem_heap_extra_B=9332
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=3197719565
+mem_heap_B=62007836
+mem_heap_extra_B=9324
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=3197719597
+mem_heap_B=61110448
+mem_heap_extra_B=9312
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=3197719629
+mem_heap_B=47900352
+mem_heap_extra_B=5768
+mem_stacks_B=0
+heap_tree=detailed
+n10: 47900352 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 26516888 0x4014C5: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13306792 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13306792 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13306792 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13210096 0x401D91: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13210096 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13210096 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n2: 13306792 0x4014A9: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13306792 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13306792 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13306792 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n0: 1794780 0x400B6F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n2: 1794780 0x4014E1: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897392 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897392 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897392 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897388 0x401D91: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897388 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897388 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n2: 897396 0x401471: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897396 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897396 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897396 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n2: 897392 0x40148D: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897392 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897392 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897392 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 897388 0x401610: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897388 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897388 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n2: 897388 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n1: 897388 0x401BDB: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+      n0: 897388 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 897388 0x4015F1: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897388 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897388 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n2: 897388 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n1: 897388 0x401BDB: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+      n0: 897388 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 897388 0x4015D2: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897388 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897388 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n2: 897388 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n1: 897388 0x401BDB: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+      n0: 897388 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+ n0: 160 in 12 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=57
+#-----------
+time=3197719661
+mem_heap_B=34690256
+mem_heap_extra_B=2224
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=3197719693
+mem_heap_B=33792868
+mem_heap_extra_B=2212
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=3197719725
+mem_heap_B=32895480
+mem_heap_extra_B=2200
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=3197719757
+mem_heap_B=31998092
+mem_heap_extra_B=2188
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=3197719789
+mem_heap_B=31100704
+mem_heap_extra_B=2176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=3197719820
+mem_heap_B=31100624
+mem_heap_extra_B=2168
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=3197719917
+mem_heap_B=31998016
+mem_heap_extra_B=2176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=3197719955
+mem_heap_B=32895408
+mem_heap_extra_B=2184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=3197719993
+mem_heap_B=33792800
+mem_heap_extra_B=2192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=3206694042
+mem_heap_B=34690192
+mem_heap_extra_B=2200
+mem_stacks_B=0
+heap_tree=detailed
+n11: 34690192 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 13306792 0x4014C5: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13306792 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13306792 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13306792 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n2: 13306792 0x4014A9: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 13306792 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 13306792 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 13306792 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n0: 1794780 0x400B6F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n2: 897396 0x401471: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897396 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897396 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897396 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 897392 0x4016D5: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897392 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n2: 897392 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n1: 897392 0x401C11: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 897392 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 897392 0x401610: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897392 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897392 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n2: 897392 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n1: 897392 0x401C11: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+      n0: 897392 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n2: 897392 0x40148D: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897392 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897392 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897392 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 897392 0x4015F1: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897392 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897392 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n2: 897392 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n1: 897392 0x401C11: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+      n0: 897392 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 897392 0x4015D2: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897392 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897392 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n2: 897392 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n1: 897392 0x401C11: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+      n0: 897392 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n2: 897392 0x4014E1: SetupSplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897392 0x401DFD: SplitGraph (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897392 0x401BA5: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n0: 897392 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n0: 80 in 11 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=67
+#-----------
+time=3206694077
+mem_heap_B=35587584
+mem_heap_extra_B=2208
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=3248973182
+mem_heap_B=34690192
+mem_heap_extra_B=2200
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=3248973213
+mem_heap_B=33792800
+mem_heap_extra_B=2192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=3470733250
+mem_heap_B=32895404
+mem_heap_extra_B=2172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=3470733282
+mem_heap_B=31998012
+mem_heap_extra_B=2164
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=3470733314
+mem_heap_B=18691220
+mem_heap_extra_B=1108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=3470733346
+mem_heap_B=5384428
+mem_heap_extra_B=52
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=3470733378
+mem_heap_B=4487036
+mem_heap_extra_B=44
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=3470733410
+mem_heap_B=3589644
+mem_heap_extra_B=36
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=3470733442
+mem_heap_B=2692252
+mem_heap_extra_B=28
+mem_stacks_B=0
+heap_tree=detailed
+n3: 2692252 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 1794780 0x400B6F: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+ n1: 897392 0x401610: AllocateBisectMemory (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+  n1: 897392 0x401684: BisectGGP (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+   n1: 897392 0x401ACE: MlevelBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+    n2: 897392 0x401B2A: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n1: 897392 0x401C11: MlevelRecursiveBisect (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+      n0: 897392 0x400B8D: main (in /home/users/mschpc/2019/xgai/partitioner/serial/serial)
+     n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n0: 80 in 19 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=77
+#-----------
+time=3470733474
+mem_heap_B=1794860
+mem_heap_extra_B=20
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=3470733505
+mem_heap_B=1794780
+mem_heap_extra_B=12
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=3470735807
+mem_heap_B=1795348
+mem_heap_extra_B=28
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=3749377678
+mem_heap_B=1794780
+mem_heap_extra_B=12
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=3749378763
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

@@ -16,6 +16,18 @@ graph.h
 graph.h
 /home/users/mschpc/2019/xgai/partitioner/parallel/graph.h
 
+/home/users/mschpc/2019/xgai/partitioner/parallel/main.c
+stdio.h
+-
+stdlib.h
+-
+mpi.h
+/home/users/mschpc/2019/xgai/partitioner/parallel/mpi.h
+graph.h
+/home/users/mschpc/2019/xgai/partitioner/parallel/graph.h
+multilevel.h
+/home/users/mschpc/2019/xgai/partitioner/parallel/multilevel.h
+
 /home/users/mschpc/2019/xgai/partitioner/parallel/multilevel.c
 multilevel.h
 /home/users/mschpc/2019/xgai/partitioner/parallel/multilevel.h
@@ -40,11 +52,23 @@ utils.h
 mpi.h
 /home/users/mschpc/2019/xgai/partitioner/parallel/mpi.h
 
+/home/users/mschpc/2019/xgai/partitioner/parallel/refine.c
+stdio.h
+-
+stdlib.h
+-
+refine.h
+/home/users/mschpc/2019/xgai/partitioner/parallel/refine.h
+
 /home/users/mschpc/2019/xgai/partitioner/parallel/refine.h
 graph.h
 /home/users/mschpc/2019/xgai/partitioner/parallel/graph.h
 utils.h
 /home/users/mschpc/2019/xgai/partitioner/parallel/utils.h
+initpart.h
+/home/users/mschpc/2019/xgai/partitioner/parallel/initpart.h
+mpi.h
+/home/users/mschpc/2019/xgai/partitioner/parallel/mpi.h
 
 /home/users/mschpc/2019/xgai/partitioner/parallel/utils.h
 

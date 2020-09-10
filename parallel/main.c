@@ -43,23 +43,23 @@ int main(int argc, char* argv[]) {
     start = MPI_Wtime();
 
     /* partition */
-    //BisectGGP(graph);
-    //int edgecut = MlevelRecursiveBisect(graph, nparts, part,0);
     InitPartParallel(graph, nparts, part, comm);
 
-    //TestSplit(graph);
+    /* end timer */
     end = MPI_Wtime();
 
-    if(rank == 0){  // change to the group with smallest edgecut
+    if(rank == 0){
         printf("run time = %f\n", end - start);
-        //IntCopy(graph->nvtxs, part, graph->where);
-        //printf("total edge cut = %d\n", ComputeEdgeCut(graph));
         WritePartition(argv[2], nvtxs, part);
     }
 
+    /* test for refinement */
+    graph = ReadGraph(argv[1]);
+
+    Refine(graph, part, nparts, comm);
 
     free(part);
-    //FreeGraph(&graph);
+    FreeGraph(&graph);
 
     MPI_Finalize();
 

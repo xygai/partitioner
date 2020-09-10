@@ -184,7 +184,7 @@ void InitPartParallel(graph_t * graph, int nparts, int *where1,  MPI_Comm comm)
     MPI_Comm_size(comm, &nprocs);
     MPI_Comm_rank(comm, &rank);
 
-    ngroups = MIN(nprocs, 4);
+    ngroups = MIN(nprocs, 16);
 
     srand(time(NULL) + rank%ngroups);
 
