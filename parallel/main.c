@@ -8,7 +8,7 @@
 
 int main(int argc, char* argv[]) {
 
-    int nparts;
+    int nparts, edgecut, redgecut;
 
     if (argc != 4) {
         fprintf(stderr, "Usage: %s <InFile> <OutFile> <nparts>\n", argv[0]);
@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
 
     MPI_Comm comm;
     int nprocs, rank;
-    double start, end;
+    double start, end, rstart, rend;
 
     MPI_Init(&argc, &argv);
     MPI_Comm_dup(MPI_COMM_WORLD, &comm);
@@ -27,9 +27,16 @@ int main(int argc, char* argv[]) {
 
     //printf("this is process %d\n", rank);
 
+    /* start timer */
+    start = MPI_Wtime();
+
     nparts = atoi(argv[3]);
 
     graph_t *graph = ReadGraph(argv[1]);
+
+    //if(rank == 0){
+    //    printf("vertex count:    %d\nedge count:      %d\n", TotalVertexWeight(graph), TotalEdgeWeight(graph));
+    //}
 
     /* print the original graph */
     //PrintGraph(graph);
@@ -39,26 +46,37 @@ int main(int argc, char* argv[]) {
     int *part = malloc(sizeof(int) * nvtxs);
     IntSet(nvtxs, 0, part);
 
-    /* start timer */
-    start = MPI_Wtime();
 
     /* partition */
-    InitPartParallel(graph, nparts, part, comm);
+    InitPartParallel(graph, nparts, part, &edgecut, comm);
 
     /* end timer */
     end = MPI_Wtime();
 
     if(rank == 0){
+        printf("nprocs = %d, nparts = %d, ngroups = %d\n", nprocs, nparts, (nprocs/(nparts/2)) < 1 ? 1: nprocs/(nparts/2));
+        printf("initial edgecut: %d\n", edgecut);
         WritePartition(argv[2], nvtxs, part);
     }
 
     /* test for refinement */
     graph = ReadGraph(argv[1]);
 
+    /* start refinement timer */
+    rstart = MPI_Wtime();
+
     Refine(graph, part, nparts, comm);
 
+    /* end refinement timer */
+    rend = MPI_Wtime();
+
     if(rank == 0){
-        printf("run time = %f\n", end - start);
+        redgecut = ComputeEdgeCut(graph);
+        printf("updated edgecut: %d\n", redgecut);
+        printf("diff in edgecut: %d\n", edgecut - redgecut);
+        printf("partition  time: %f\n", end - start);
+        printf("refinement time: %f\n", rend - rstart);
+        printf("execution  time: %f\n", (rend - rstart) + (end - start));
         WritePartition("refine.piece.part", nvtxs, part);
     }
 

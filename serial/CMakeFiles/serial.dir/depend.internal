@@ -32,6 +32,7 @@ CMakeFiles/serial.dir/multilevel.c.o
  /home/users/mschpc/2019/xgai/partitioner/serial/utils.h
 CMakeFiles/serial.dir/refine.c.o
  /home/users/mschpc/2019/xgai/partitioner/serial/graph.h
+ /home/users/mschpc/2019/xgai/partitioner/serial/initpart.h
  /home/users/mschpc/2019/xgai/partitioner/serial/refine.c
  /home/users/mschpc/2019/xgai/partitioner/serial/refine.h
  /home/users/mschpc/2019/xgai/partitioner/serial/utils.h

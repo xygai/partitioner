@@ -45,6 +45,8 @@ graph.h
 /home/users/mschpc/2019/xgai/partitioner/serial/graph.h
 utils.h
 /home/users/mschpc/2019/xgai/partitioner/serial/utils.h
+initpart.h
+/home/users/mschpc/2019/xgai/partitioner/serial/initpart.h
 
 /home/users/mschpc/2019/xgai/partitioner/serial/utils.h
 

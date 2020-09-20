@@ -18,8 +18,12 @@ typedef struct graph_t {
 
     /* Refine parameters */
     int nbnd;               /* number of vertices on the boundary of a partition */
+    int mincut;
     int *bndptr;            /* bndptr[10] = 5, the 10th vertex of the original input graph is the 5th boundary vertex */
     int *bndind;            /* bndind[5] = 10; the 5th boundary vertex is the 10th vertex of the original input graph */
+    int *id;
+    int *ed;
+    int *to;
 
 } graph_t;
 

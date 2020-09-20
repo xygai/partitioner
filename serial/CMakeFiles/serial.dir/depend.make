@@ -31,6 +31,7 @@ CMakeFiles/serial.dir/multilevel.c.o: refine.h
 CMakeFiles/serial.dir/multilevel.c.o: utils.h
 
 CMakeFiles/serial.dir/refine.c.o: graph.h
+CMakeFiles/serial.dir/refine.c.o: initpart.h
 CMakeFiles/serial.dir/refine.c.o: refine.c
 CMakeFiles/serial.dir/refine.c.o: refine.h
 CMakeFiles/serial.dir/refine.c.o: utils.h

@@ -168,7 +168,7 @@ void Refine(graph_t *graph, int * part, int nparts, MPI_Comm comm){
     /* this rank will work on the [vs, ve] vertices */
     int vs, ve; // vertex start, vertex end
     decomp1d(graph->nvtxs,  nprocs,  rank,  &vs, & ve);
-    printf("[ID: %d] start %d end %d total %d\n", rank, vs, ve, graph->nvtxs);
+    //printf("[ID: %d] start %d end %d total %d\n", rank, vs, ve, graph->nvtxs);
 
 
     /* add the parititon info */
@@ -178,7 +178,7 @@ void Refine(graph_t *graph, int * part, int nparts, MPI_Comm comm){
     /* each processor compute boundary vertices of its own part of the graph */
     //ComputeRefineParams(graph);
     ComputeRefineParamsPar(graph, rank, vs, ve);
-    printf("[ID %d] no of boundary vtx = %d, ec = %d\n", rank, graph->nbnd, graph->mincut);
+    //printf("[ID %d] no of boundary vtx = %d, ec = %d\n", rank, graph->nbnd, graph->mincut);
 
     int i,j,k, count = 0;
 //  for(i = 0 ; i < graph->nvtxs; i++){
@@ -191,7 +191,7 @@ void Refine(graph_t *graph, int * part, int nparts, MPI_Comm comm){
             count++;
             //printf("id = %d, ed = %d, from = %d, to = %d\n",graph->id[i], graph->ed[i], graph->where[i], graph->to[i]);
     }
-    printf("count = %d\n",count);
+    //printf("count = %d\n",count);
 
     int *totalgain = malloc(sizeof(int) * nparts * nparts);      // stores local total gain by perform the proposed move from i to j, assume maximum 64 partitions
     int *gtotalgain = malloc(sizeof(int) * nparts * nparts);     // stores global total gain by perform the proposed move from i to j, assume maximum 64 partitions
@@ -235,7 +235,6 @@ void Refine(graph_t *graph, int * part, int nparts, MPI_Comm comm){
 
     if(rank == 0){
         IntCopy(graph->nvtxs, part, graph->where);
-        printf("new total edge cut = %d\n", ComputeEdgeCut(graph));
     }
 
     /* Free refine memory */

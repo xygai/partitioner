@@ -174,7 +174,7 @@ void PartGraphRecursive(int nvtxs, int *xadj, int *adjncy, int *vwgt, int *adjwg
 
 
 
-void InitPartParallel(graph_t * graph, int nparts, int *where1,  MPI_Comm comm)
+void InitPartParallel(graph_t * graph, int nparts, int *where1, int *edgecut, MPI_Comm comm)
 {
     int nprocs, rank, ngroups;
     MPI_Comm newcomm;
@@ -184,7 +184,8 @@ void InitPartParallel(graph_t * graph, int nparts, int *where1,  MPI_Comm comm)
     MPI_Comm_size(comm, &nprocs);
     MPI_Comm_rank(comm, &rank);
 
-    ngroups = MIN(nprocs, 16);
+    //ngroups = MIN(nprocs, 1);
+    ngroups = MAX(nprocs/(nparts/2), 1);
 
     srand(time(NULL) + rank%ngroups);
 
@@ -294,8 +295,10 @@ void InitPartParallel(graph_t * graph, int nparts, int *where1,  MPI_Comm comm)
 
     MPI_Allreduce(&ledgecut, &gedgecut, 1, MPI_2INT, MPI_MINLOC, comm);
     MPI_Bcast(where1, gnvtxs, MPI_INT, gedgecut.rank, comm);
-    //printf("edgecut = %d\n", gedgecut.cut);
 
+    *edgecut = gedgecut.cut;
+    //if (rank == 0)
+    //    printf("initial edgecut: %d\n", gedgecut.cut);
 
     free(xadj);
     free(adjncy);
@@ -341,7 +344,7 @@ void KeepPart(graph_t *graph, int *part, int mypart){
                     adjwgt[mynedges++] = adjwgt[j];
                 }
             }
-            j = xadj[i+1];  /* Save xadj[i+1] for later use */
+            j = xadj[i+1];
 
             vwgt[mynvtxs+h] = vwgt[i+h];
 
@@ -349,7 +352,7 @@ void KeepPart(graph_t *graph, int *part, int mypart){
             xadj[++mynvtxs] = mynedges;
         }
         else {
-            j = xadj[i+1];  /* Save xadj[i+1] for later use */
+            j = xadj[i+1];
         }
     }
 
